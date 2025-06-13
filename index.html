@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Web Tools</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1E1E2F;
+            color: #EAEAEA;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2B2D42;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #FFD700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        /* Tool Card Styles */
+        .tool-card {
+            background-color: #3A3D5B;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            background-color: #FFD700;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+        }
+
+        .tool-card:hover h2,
+        .tool-card:hover p {
+            color: #1E1E2F;
+        }
+
+        .tool-card h2 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .tool-card p {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #1E1E2F;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            align-self: flex-start;
+        }
+
+        .btn:hover {
+            background-color: #E6C200;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2B2D42;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Tool Categories */
+        .category-title {
+            grid-column: 1 / -1;
+            color: #FFD700;
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Free Web Tools</h1>
+            <p>Your one-stop solution for all online tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="category-title">Image Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h2>Image Converter</h2>
+                <p>Convert images between different formats like JPG, PNG, GIF, WEBP, and more.</p>
+                <button class="btn" onclick="redirectToTool('Image Converter')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Image Compressor</h2>
+                <p>Reduce image file size without significant quality loss for faster web performance.</p>
+                <button class="btn" onclick="redirectToTool('Image Compressor')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Image Crop</h2>
+                <p>Crop images to your desired dimensions with precision and ease.</p>
+                <button class="btn" onclick="redirectToTool('Image Crop')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Image to PDF Converter</h2>
+                <p>Convert one or multiple images into a single PDF document.</p>
+                <button class="btn" onclick="redirectToTool('Image to PDF Converter')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Image Resizer</h2>
+                <p>Resize images to exact dimensions while maintaining aspect ratio.</p>
+                <button class="btn" onclick="redirectToTool('Image Resizer')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Watermark Remover</h2>
+                <p>Remove watermarks from images with advanced AI technology.</p>
+                <button class="btn" onclick="redirectToTool('Watermark Remover')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Background Remover</h2>
+                <p>Remove backgrounds from images automatically with precision.</p>
+                <button class="btn" onclick="redirectToTool('Background Remover')">Use Tool</button>
+            </div>
+        </div>
+
+        <h2 class="category-title">Video Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h2>Video Converter</h2>
+                <p>Convert videos between different formats like MP4, AVI, MOV, MKV, and more.</p>
+                <button class="btn" onclick="redirectToTool('Video Converter')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Video Cutter/Trimmer</h2>
+                <p>Cut and trim video clips to your desired length with frame accuracy.</p>
+                <button class="btn" onclick="redirectToTool('Video Cutter/Trimmer')">Use Tool</button>
+            </div>
+        </div>
+
+        <h2 class="category-title">Financial Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h2>Currency Converter</h2>
+                <p>Convert between different currencies with up-to-date exchange rates.</p>
+                <button class="btn" onclick="redirectToTool('Currency Converter')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Compound Interest Calculator</h2>
+                <p>Calculate how your investments grow with compound interest over time.</p>
+                <button class="btn" onclick="redirectToTool('Compound Interest Calculator')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Loan Calculator</h2>
+                <p>Calculate loan payments, interest, and amortization schedules.</p>
+                <button class="btn" onclick="redirectToTool('Loan Calculator')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>GST Calculator</h2>
+                <p>Calculate GST amounts and totals for goods and services.</p>
+                <button class="btn" onclick="redirectToTool('GST Calculator')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>EMI Calculator</h2>
+                <p>Calculate Equated Monthly Installments for loans and purchases.</p>
+                <button class="btn" onclick="redirectToTool('EMI Calculator')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>SIP Calculator</h2>
+                <p>Calculate returns on Systematic Investment Plans for mutual funds.</p>
+                <button class="btn" onclick="redirectToTool('SIP Calculator')">Use Tool</button>
+            </div>
+        </div>
+
+        <h2 class="category-title">Other Useful Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h2>Age Calculator</h2>
+                <p>Calculate exact age in years, months, and days from birth date.</p>
+                <button class="btn" onclick="redirectToTool('Age Calculator')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>QR Code Generator</h2>
+                <p>Create QR codes for URLs, text, contact information, and more.</p>
+                <button class="btn" onclick="redirectToTool('QR Code Generator')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Unit Converter</h2>
+                <p>Convert between different units of length, weight, volume, temperature, etc.</p>
+                <button class="btn" onclick="redirectToTool('Unit Converter')">Use Tool</button>
+            </div>
+
+            <div class="tool-card">
+                <h2>Audio Trim</h2>
+                <p>Trim audio files to create perfect clips from your recordings.</p>
+                <button class="btn" onclick="redirectToTool('Audio Trim')">Use Tool</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Free Web Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToTool(toolName) {
+            alert(`Redirecting to ${toolName}...`);
+            // In a real implementation, you would redirect to the actual tool page
+            // window.location.href = `/tools/${toolName.toLowerCase().replace(/ /g, '-')}`;
+        }
+    </script>
+</body>
+</html>
